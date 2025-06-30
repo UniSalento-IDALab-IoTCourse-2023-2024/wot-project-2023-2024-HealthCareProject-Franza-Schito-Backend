@@ -1,0 +1,209 @@
+version: "3.8"
+
+services:
+
+  my-sba:
+    platform: linux/x86_64
+    image: openjdk:17-jdk-alpine
+    container_name: mysbaimage
+    ports:
+      - 8080:8080
+      - 8000:8000
+    expose:
+      - "8000"
+    depends_on:
+      - my-db
+    networks:
+      - my-net
+    volumes:
+      - ./build/libs/IotProject-0.0.1-SNAPSHOT.jar:/app/app.jar
+    working_dir: /app
+    entrypoint: java -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8000 -jar /app/app.jar
+  my-db:
+    image: mongo:5.0
+    container_name: mongodbimage
+    ports:
+      - 27017:27017
+    networks:
+      - my-net
+
+  my-sleep:
+    platform: linux/x86_64
+    image: openjdk:17-jdk-alpine
+    container_name: mySleepimage
+    ports:
+      - 8081:8080
+      - 8001:8000
+    expose:
+      - "8001"
+    depends_on:
+      - my-dbSleep
+    networks:
+      - my-net
+    volumes:
+      - ./build/libs/IotProject-0.0.1-SNAPSHOT.jar:/app/app.jar
+    working_dir: /app
+    entrypoint: java -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8001 -jar /app/app.jar
+  my-dbSleep:
+    image: mongo:5.0
+    container_name: mongodbimageSleep
+    ports:
+      - 27018:27017
+    networks:
+      - my-net
+
+  my-spo2:
+    platform: linux/x86_64
+    image: openjdk:17-jdk-alpine
+    container_name: myspo2image
+    ports:
+      - 8082:8080
+      - 8002:8000
+    expose:
+      - "8002"
+    depends_on:
+      - my-dbSpo2
+    networks:
+      - my-net
+    volumes:
+      - ./build/libs/IotProject-0.0.1-SNAPSHOT.jar:/app/app.jar
+    working_dir: /app
+    entrypoint: java -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8002 -jar /app/app.jar
+  my-dbSpo2:
+    image: mongo:5.0
+    container_name: mongodbimagespo2
+    ports:
+      - 27019:27017
+    networks:
+      - my-net
+
+  my-heartRate:
+    platform: linux/x86_64
+    image: openjdk:17-jdk-alpine
+    container_name: myheartRateimage
+    ports:
+      - 8083:8080
+      - 8003:8000
+    expose:
+      - "8003"
+    depends_on:
+      - my-dbHeartRate
+    networks:
+      - my-net
+    volumes:
+      - ./build/libs/IotProject-0.0.1-SNAPSHOT.jar:/app/app.jar
+    working_dir: /app
+    entrypoint: java -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8003 -jar /app/app.jar
+  my-dbHeartRate:
+    image: mongo:5.0
+    container_name: mongodbimageHeartRate
+    ports:
+      - 27020:27017
+    networks:
+      - my-net
+
+  my-weight:
+    platform: linux/x86_64
+    image: openjdk:17-jdk-alpine
+    container_name: myWeightimage
+    ports:
+      - 8084:8080
+      - 8004:8000
+    expose:
+      - "8004"
+    depends_on:
+      - my-dbWeight
+    networks:
+      - my-net
+    volumes:
+      - ./build/libs/IotProject-0.0.1-SNAPSHOT.jar:/app/app.jar
+    working_dir: /app
+    entrypoint: java -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8004 -jar /app/app.jar
+  my-dbWeight:
+    image: mongo:5.0
+    container_name: mongodbimageWeight
+    ports:
+      - 27021:27017
+    networks:
+      - my-net
+
+  my-activity:
+    platform: linux/x86_64
+    image: openjdk:17-jdk-alpine
+    container_name: myActivityimage
+    ports:
+      - 8085:8080
+      - 8005:8000
+    expose:
+      - "8005"
+    depends_on:
+      - my-dbActivity
+    networks:
+      - my-net
+    volumes:
+      - ./build/libs/IotProject-0.0.1-SNAPSHOT.jar:/app/app.jar
+    working_dir: /app
+    entrypoint: java -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8005 -jar /app/app.jar
+  my-dbActivity:
+    image: mongo:5.0
+    container_name: mongodbimageActivity
+    ports:
+      - 27022:27017
+    networks:
+      - my-net
+
+  my-food:
+    platform: linux/x86_64
+    image: openjdk:17-jdk-alpine
+    container_name: myFoodimage
+    ports:
+      - 8086:8080
+      - 8006:8000
+    expose:
+      - "8006"
+    depends_on:
+      - my-dbFood
+    networks:
+      - my-net
+    volumes:
+      - ./build/libs/IotProject-0.0.1-SNAPSHOT.jar:/app/app.jar
+    working_dir: /app
+    entrypoint: java -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8006 -jar /app/app.jar
+  my-dbFood:
+    image: mongo:5.0
+    container_name: mongodbimageFood
+    ports:
+      - 27023:27017
+    networks:
+      - my-net
+
+  my-message:
+    platform: linux/x86_64
+    image: openjdk:17-jdk-alpine
+    container_name: myMessageimage
+    ports:
+      - 8087:8080
+      - 8007:8000
+    expose:
+      - "8007"
+    depends_on:
+      - my-dbMessage
+    networks:
+      - my-net
+    volumes:
+      - ./build/libs/IotProject-0.0.1-SNAPSHOT.jar:/app/app.jar
+    working_dir: /app
+    entrypoint: java -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8006 -jar /app/app.jar
+  my-dbMessage:
+    image: mongo:5.0
+    container_name: mongodbimageMessage
+    ports:
+      - 27024:27017
+    networks:
+      - my-net
+
+networks:
+  my-net:
+    driver:
+      "bridge"
+
