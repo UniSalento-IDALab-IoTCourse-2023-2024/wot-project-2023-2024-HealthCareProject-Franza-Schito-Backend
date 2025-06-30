@@ -19,6 +19,10 @@ Le componenti dell'architettura sono:
 Il cuore logico del sistema risiede nel backend, sviluppato utilizzando il framework  **Java Spring Boot**. Esso rappresenta oggi uno degli standard de facto nello sviluppo di applicazioni enterprise grazie alla sua architettura modulare e al forte ecosistema di librerie integrate.
 Nel contesto dell’applicazione, Spring Boot gestisce l'intera logica di business: riceve i dati biometrici inviati dal dispositivo wearable tramite chiamate HTTP REST, li valida, li processa e li memorizza nel database. È responsabile anche dell’elaborazione periodica di questi dati per identificare eventuali anomalie cliniche, confrontando i valori rilevati con soglie parametriche definite per ciascun paziente.
 
+## API REST
+
+Il back-end del sistema, sviluppato in Java con il framework Spring Boot, espone una serie di API che consentono l'interazione con i dati raccolti, il modello predittivo e la gestione degli utenti. Le API sono organizzate per domini funzionali e sono progettate secondo i principi REST (Representational State Transfer), utilizzando convenzioni HTTP standard (GET, POST, PUT, DELETE) e risposte in formato JSON.
+
 ## Il repository del Front End si trova al seguente link: [wot-project-2023-2024-HealthCareProject-Franza-Schito-FrontEnd](https://github.com/UniSalento-IDALab-IoTCourse-2023-2024/wot-project-2023-2024-HealthCareProject-Franza-Schito-FrontEnd.git)
 
 
