@@ -9,8 +9,9 @@ Il progetto si è sviluppato su due fronti principali. Da una parte, è stato im
 ## Architettura del sistema
 
 <div align="center">
-  <img src="Architettura.png" alt="Architettura" width="400"/>
+  <img src="Architettura.png" alt="Architettura" width="1000"/>
 </div>
+
 Le componenti dell'architettura sono:
 - **Front End - Javascript** 
 - **Back End - Java** 
