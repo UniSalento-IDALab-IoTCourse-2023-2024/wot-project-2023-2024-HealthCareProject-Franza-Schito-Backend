@@ -31,4 +31,4 @@ Il back-end del sistema, sviluppato in Java con il framework Spring Boot, espone
 
 ## Il repository del Machine Laerning si trova al seguente link: [wot-project-2023-2024-HealthCareProject-Franza-Schito-MachineLearning](https://github.com/UniSalento-IDALab-IoTCourse-2023-2024/wot-project-2023-2024-HealthCareProject-Franza-Schito-MachineLearning.git)
 
-## Il sito web del progetto si trova al seguente link: []()
+## Il sito web del progetto si trova al seguente link: [Sito Web](https://unisalento-idalab-iotcourse-2023-2024.github.io/wot-project-2023-2024-presentation-Franza-Schito-AndreaFr0.github.io/)
