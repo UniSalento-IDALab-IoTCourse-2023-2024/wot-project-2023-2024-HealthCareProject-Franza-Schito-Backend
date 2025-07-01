@@ -1,4 +1,4 @@
-# wot-HealthCareProject-Franza-Schito-Backend
+# wot-NeuroCare-Franza-Schito-Backend
 
 ## Descrizione del progetto
 
@@ -26,10 +26,10 @@ Nel contesto dell’applicazione, Spring Boot gestisce l'intera logica di busine
 
 Il back-end del sistema, sviluppato in Java con il framework Spring Boot, espone una serie di API che consentono l'interazione con i dati raccolti, il modello predittivo e la gestione degli utenti. Le API sono organizzate per domini funzionali e sono progettate secondo i principi REST (Representational State Transfer), utilizzando convenzioni HTTP standard (GET, POST, PUT, DELETE) e risposte in formato JSON.
 
-## Il repository del Front End si trova al seguente link: [wot-project-2023-2024-HealthCareProject-Franza-Schito-FrontEnd](https://github.com/UniSalento-IDALab-IoTCourse-2023-2024/wot-project-2023-2024-HealthCareProject-Franza-Schito-FrontEnd.git)
+## Il repository del Front End si trova al seguente link: [wot-project-2023-2024-NeuroCare-Franza-Schito-FrontEnd](https://github.com/UniSalento-IDALab-IoTCourse-2023-2024/wot-project-2023-2024-NeuroCare-Franza-Schito-FrontEnd.git)
 
 
 
-## Il repository del Machine Laerning si trova al seguente link: [wot-project-2023-2024-HealthCareProject-Franza-Schito-MachineLearning](https://github.com/UniSalento-IDALab-IoTCourse-2023-2024/wot-project-2023-2024-HealthCareProject-Franza-Schito-MachineLearning.git)
+## Il repository del Machine Laerning si trova al seguente link: [wot-project-2023-2024-NeuroCare-Franza-Schito-MachineLearning](https://github.com/UniSalento-IDALab-IoTCourse-2023-2024/wot-project-2023-2024-NeuroCare-Franza-Schito-MachineLearning.git)
 
 ## Il sito web del progetto si trova al seguente link: [Sito Web](https://unisalento-idalab-iotcourse-2023-2024.github.io/wot-project-2023-2024-presentation-Franza-Schito-AndreaFr0.github.io/)
